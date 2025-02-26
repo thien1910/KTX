@@ -6,10 +6,7 @@ import com.project.KTX.entity.Contract;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -18,7 +15,8 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor // khoi tao ko tham so
 @AllArgsConstructor
-
+@Getter
+@Setter
 public class BillDto {
     @NotNull(message = "Contract is required")
     private String contract_id;

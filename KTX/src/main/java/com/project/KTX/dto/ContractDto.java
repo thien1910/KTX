@@ -8,10 +8,7 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -20,7 +17,8 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor // khoi tao ko tham so
 @AllArgsConstructor
-
+@Getter
+@Setter
 public class ContractDto {
     private String student_id;
     private String room_id;

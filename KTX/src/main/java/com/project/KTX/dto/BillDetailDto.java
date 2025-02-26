@@ -4,10 +4,7 @@ import com.project.KTX.entity.Bill;
 import com.project.KTX.entity.RoomService;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -15,7 +12,8 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor // khoi tao ko tham so
 @AllArgsConstructor
-
+@Getter
+@Setter
 public class BillDetailDto {
 
     private String bill_id;

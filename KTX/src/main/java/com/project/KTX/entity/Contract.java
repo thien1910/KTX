@@ -3,10 +3,7 @@ package com.project.KTX.entity;
 import com.project.KTX.Enum.ContractStatus;
 import com.project.KTX.Enum.DepositStatus;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -17,6 +14,8 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class Contract {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

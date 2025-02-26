@@ -1,5 +1,6 @@
 package com.project.KTX.entity;
 
+import com.project.KTX.Enum.ContractStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,20 +14,19 @@ import java.security.Timestamp;
 @AllArgsConstructor
 @Getter
 @Setter
-public class RoomService {
+public class UtilityService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer roomServiceId;
+    private Integer utilityServiceId;
 
-    @ManyToOne
-    @JoinColumn(name = "room_id", nullable = false)
-    private Room room;
+    private String utilityServiceName;
+    private String description;
+    private BigDecimal pricePerUnit;
+    private String calculationUnit;
 
-    @ManyToOne
-    @JoinColumn(name = "service_id", nullable = false)
-    private UtilityService service;
+    @Enumerated(EnumType.STRING)
+    private ContractStatus status;
 
-    private BigDecimal price;
     private Timestamp createdAt;
     private Timestamp updatedAt;
 }
